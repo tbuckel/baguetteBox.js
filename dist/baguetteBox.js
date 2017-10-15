@@ -1,7 +1,7 @@
 /*!
  * baguetteBox.js
  * @author  feimosi
- * @version 1.9.1
+ * @version %%INJECT_VERSION%%
  * @url https://github.com/feimosi/baguetteBox.js
  */
 
@@ -716,6 +716,7 @@
         run: run,
         showNext: showNextImage,
         showPrevious: showPreviousImage,
-        destroy: destroyPlugin
+        destroy: destroyPlugin,
+        removeFromCache: removeFromCache
     };
 }));

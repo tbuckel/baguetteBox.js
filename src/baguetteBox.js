@@ -716,6 +716,7 @@
         run: run,
         showNext: showNextImage,
         showPrevious: showPreviousImage,
-        destroy: destroyPlugin
+        destroy: destroyPlugin,
+        removeFromCache: removeFromCache
     };
 }));
