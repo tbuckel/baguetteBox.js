@@ -1,6 +1,6 @@
 {
   "name": "baguettebox.js",
-  "version": "1.9.1-TB",
+  "version": "1.9.2-TB",
   "author": "feimosi",
   "description": "Simple and easy to use lightbox script written in pure JavaScript",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "gulp-eslint": "~4.0.0",
     "gulp-gh-pages": "~0.5.4",
     "gulp-if": "^2.0.2",
-    "gulp-inject-version": "~1.0.0",
+    "gulp-inject-version": "^1.0.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-rimraf": "~0.2.1",
     "gulp-sass": "^3.1.0",

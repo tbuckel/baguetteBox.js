@@ -318,15 +318,17 @@
     }
 
     function unbindEvents() {
-        unbind(overlay, 'click', overlayClickHandler);
-        unbind(previousButton, 'click', previousButtonClickHandler);
-        unbind(nextButton, 'click', nextButtonClickHandler);
-        unbind(closeButton, 'click', closeButtonClickHandler);
-        unbind(slider, 'contextmenu', contextmenuHandler);
-        unbind(overlay, 'touchstart', touchstartHandler);
-        unbind(overlay, 'touchmove', touchmoveHandler);
-        unbind(overlay, 'touchend', touchendHandler);
-        unbind(document, 'focus', trapFocusInsideOverlay, true);
+        if (overlay) {
+            unbind(overlay, 'click', overlayClickHandler);
+            unbind(previousButton, 'click', previousButtonClickHandler);
+            unbind(nextButton, 'click', nextButtonClickHandler);
+            unbind(closeButton, 'click', closeButtonClickHandler);
+            unbind(slider, 'contextmenu', contextmenuHandler);
+            unbind(overlay, 'touchstart', touchstartHandler);
+            unbind(overlay, 'touchmove', touchmoveHandler);
+            unbind(overlay, 'touchend', touchendHandler);
+            unbind(document, 'focus', trapFocusInsideOverlay, true);
+        }
     }
 
     function prepareOverlay(gallery, userOptions) {
@@ -706,7 +708,9 @@
         unbindEvents();
         clearCachedData();
         unbind(document, 'keydown', keyDownHandler);
-        document.getElementsByTagName('body')[0].removeChild(document.getElementById('baguetteBox-overlay'));
+        if (document.getElementById('baguetteBox-overlay')) {
+            document.getElementsByTagName('body')[0].removeChild(document.getElementById('baguetteBox-overlay'));
+        }
         data = {};
         currentGallery = [];
         currentIndex = 0;
